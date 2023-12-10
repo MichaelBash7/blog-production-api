@@ -1,13 +1,35 @@
 {
-  "posts": [
+  "notifications": [
     {
       "id": "1",
-      "title": "json-server",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "1"
     },
     {
       "id": "2",
-      "title": "json-server",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
       "userId": "2"
     }
   ],
@@ -601,6 +623,30 @@
       "userId": "1",
       "text": "123",
       "id": "4pVSNTR"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "Cool!",
+      "id": "BLh9Gpz"
+    },
+    {
+      "articleId": "8",
+      "userId": "2",
+      "text": "123",
+      "id": "I7S1sPO"
+    },
+    {
+      "articleId": "5",
+      "userId": "1",
+      "text": "I love GO!",
+      "id": "Wst84V5"
+    },
+    {
+      "articleId": "7",
+      "userId": "1",
+      "text": "Best",
+      "id": "JsF1Hh3"
     }
   ],
   "users": [
@@ -608,14 +654,63 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://gameguru.ru/media/comment_images/2022/10/26/image0_ep4w7vj.jpg"
+      "roles": [
+        "ADMIN"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
+      },
+      "avatar": "https://gameguru.ru/media/comment_images/2022/10/26/image0_ep4w7vj.jpg",
+      "jsonSettings": {
+        "theme": "app_dark_theme",
+        "isFirstVisit": true,
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
+      }
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": [
+        "USER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false,
+        "isAppRedesigned": false
+      },
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg",
+      "jsonSettings": {
+        "isArticlesPageWasOpened": true
+      }
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
@@ -626,7 +721,7 @@
       "lastname": "Admin",
       "age": 45,
       "currency": "RUB",
-      "country": "Belarus",
+      "country": "Russia",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://gameguru.ru/media/comment_images/2022/10/26/image0_ep4w7vj.jpg"
@@ -639,8 +734,77 @@
       "currency": "RUB",
       "country": "Russia",
       "city": "Moscow",
-      "username": "ulbi tv",
+      "username": "ivan567",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "first": "test",
+      "lastname": "user",
+      "age": 465,
+      "currency": "EUR",
+      "country": "Ukraine",
+      "city": "Moscow",
+      "username": "testuser",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "feedback": "Amazing!",
+      "id": "pKzekil"
+    },
+    {
+      "userId": "1",
+      "articleId": "18",
+      "rate": 3,
+      "feedback": "Not bad",
+      "id": "BfByIni"
     }
   ]
 }
